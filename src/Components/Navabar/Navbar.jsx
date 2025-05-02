@@ -5,7 +5,7 @@ import logo from '../../assets/logo.webp';
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // Menu ochilish holati
+  const [menuOpen, setMenuOpen] = useState(false); 
 
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);
@@ -29,7 +29,6 @@ function Navbar() {
           {darkMode ? '🌙' : '☀️'}
         </button>
 
-        {/* Hamburger menu (mobilda) */}
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
