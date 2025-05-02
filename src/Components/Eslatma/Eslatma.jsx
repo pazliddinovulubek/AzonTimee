@@ -9,7 +9,7 @@ function Eslatma() {
     fetch('https://hadithapi.com/api/books?apiKey=$2y$10$UMaG9mJYSvANIiLRJdFggOWUOeEUtGJB43Ls4toFVHjz042rH5y')
       .then(res => res.json())
       .then(json => {
-        console.log("Kelgan ma'lumot:", json); // 👈 Buni ko'ring
+        console.log("Kelgan ma'lumot:", json); 
         if (Array.isArray(json.data)) {
           setData(json.data);
         } else {

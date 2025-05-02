@@ -24,14 +24,14 @@ function Jadval({ darkMode }) {
         const data = await response.json();
 
         if (data && data.data && data.data.timings) {
-          const readableDate = data.data.date.readable;  // Date ichidan readable
+          const readableDate = data.data.date.readable;
 
           fetchedData.push({
             oy: formattedMonth,
             kun: '02',
             yil: '2025',
-            readableDate: readableDate,  // Readable sanani qo'shish
-            timings: data.data.timings,  // Namoz vaqtlarini qo'shish
+            readableDate: readableDate,
+            timings: data.data.timings,
           });
         } else {
           console.error("Javobdagi ma'lumot noto'g'ri:", data);
