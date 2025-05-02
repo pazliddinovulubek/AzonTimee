@@ -100,7 +100,6 @@ body.dark-mode .navbar {
     transition: transform 0.3s ease;
     z-index: 999;
   }
-
   .nav-links.open {
     transform: translateX(0);
   }
@@ -108,6 +107,9 @@ body.dark-mode .navbar {
   .menu-toggle {
     display: block;
     font-size: 28px;
+  }
+  body.dark-mode .nav-links{
+    background: #0f172a;
   }
 
   .nav-links a {
