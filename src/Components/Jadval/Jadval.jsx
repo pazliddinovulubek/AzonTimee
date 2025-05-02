@@ -12,7 +12,8 @@ function Jadval({ darkMode }) {
       for (let month of months) {
         const formattedMonth = month.toString().padStart(2, '0');
         const response = await fetch(
-          `https://api.aladhan.com/v1/timingsByCity/02-${formattedMonth}-2025?city=Namangan&country=Uzbekistan&method=2`
+          `https://api.aladhan.com/v1/timingsByCity/02-${formattedMonth}-2025?city=Namangan&country=Uzbekistan&method=2
+`
         );
 
         if (!response.ok) {
