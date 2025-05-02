@@ -7,6 +7,7 @@
 body.dark-mode {
   background-color: #0f172a;
   color: #f1f5f9;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -20,14 +21,16 @@ body.dark-mode {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  flex-wrap: nowrap;
+}
+
+body.dark-mode .navbar {
+  background-color: #222;
 }
 
 .logo-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: sans-serif;
 }
 
 .logo-brand img {
@@ -43,42 +46,21 @@ body.dark-mode {
 .nav-links {
   display: flex;
   gap: 24px;
-  transition: transform 0.3s ease;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #1e5631;
-  width: 200px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(100%);
-  border-radius: 4px;
-  z-index: 999;
-}
-
-.nav-links.open {
-  transform: translateX(0);
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: 0.3s ease;
   font-family: sans-serif;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
   background-color: #ffd700;
   color: #1e5631;
-  transform: scale(1.1);
-}
-
-body.dark-mode .navbar {
-  background-color: #333;
 }
 
 .nav-controls {
@@ -89,10 +71,9 @@ body.dark-mode .navbar {
 .nav-controls button {
   background: none;
   border: none;
-  font-size: 22px;
+  font-size: 24px;
   color: white;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .nav-controls button:hover {
@@ -101,11 +82,6 @@ body.dark-mode .navbar {
 
 .menu-toggle {
   display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -115,11 +91,14 @@ body.dark-mode .navbar {
     right: 0;
     background-color: #1e5631;
     width: 200px;
+    height: auto;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 40px;
     transform: translateX(100%);
-    border-radius: 4px;
+    transition: transform 0.3s ease;
+    z-index: 999;
   }
 
   .nav-links.open {
@@ -128,14 +107,11 @@ body.dark-mode .navbar {
 
   .menu-toggle {
     display: block;
+    font-size: 28px;
   }
 
   .nav-links a {
     padding: 12px;
     font-size: 18px;
-  }
-
-  .navbar {
-    padding: 12px 16px;
   }
 }

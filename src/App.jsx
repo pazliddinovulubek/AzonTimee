@@ -5,20 +5,21 @@ import Time from './Components/Time/Time';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);
   }, [darkMode]);
 
   return (
-    <Router>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+    <>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <main className={darkMode ? 'dark' : ''}>
         <Routes>
           <Route path="/" element={<Time darkMode={darkMode} />} />
         </Routes>
       </main>
-    </Router>
+    </>
   );
 }
 

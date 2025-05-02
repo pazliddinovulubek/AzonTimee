@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './Time.css';  // CSS faylini ulash
+import './Time.css';
 
-function Time() {
+function Time({ darkMode }) {
   const [namozVaqtlari, setNamozVaqtlari] = useState({});
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function Time() {
   }, []);
 
   return (
-    <div className="time-container">
+    <div className={`time-container ${darkMode ? 'dark' : ''}`}>
       <h1 className="title">Namoz Vaqtlari</h1>
       {namozVaqtlari.Fajr ? (
         <ul className="time-list">

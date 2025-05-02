@@ -9,12 +9,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background: #1e5631;
   color: white;
   font-family: 'Arial', sans-serif;
   text-align: center;
   padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.time-container.dark {
+  background: #0f172a;
+  color: #f1f5f9;
 }
 
 .title {
@@ -34,6 +40,7 @@
   font-size: 1.2rem;
   line-height: 2rem;
 }
+
 .time-item {
   width: 400px;
   cursor: pointer;
@@ -44,6 +51,11 @@
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
+}
+
+.time-container.dark .time-item {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 .time-item:hover {
@@ -57,22 +69,23 @@
   font-weight: bold;
   animation: blink 1.5s infinite;
 }
-.time h1{
+
+.time h1 {
   font-size: 30px;
 }
-.time-item p{
+
+.time-item p {
   font-size: 20px;
   margin-top: 30px;
 }
+
 @keyframes blink {
   0% {
     opacity: 0.5;
   }
-
   50% {
     opacity: 1;
   }
-
   100% {
     opacity: 0.5;
   }
@@ -86,22 +99,27 @@
   .time-item {
     font-size: 1rem;
     padding: 10px;
+    width: 300px;
   }
 
   .loading-text {
     font-size: 1.2rem;
   }
-  .time-container{
+
+  .time-container {
     height: auto;
     background: #1e5631;
   }
-  .time-item{
-    width: 300px;
+
+  .time-container.dark {
+    background: #0f172a;
   }
-  .time h1{
+
+  .time h1 {
     font-size: 22px;
   }
-  .time-list p{
+
+  .time-list p {
     font-size: 16px;
   }
 }
