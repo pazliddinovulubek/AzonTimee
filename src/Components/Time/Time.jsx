@@ -7,7 +7,7 @@ function Time() {
   useEffect(() => {
     const fetchNamozVaqtlari = async () => {
       const response = await fetch(
-        "https://api.aladhan.com/v1/timingsByCity?city=Tashkent&country=Uzbekistan&method=2"
+        "https://api.aladhan.com/v1/timingsByCity/02-05-2025?city=Namangan&country=Uzbekistan&method=2"
       );
       const data = await response.json();
       setNamozVaqtlari(data.data.timings);
@@ -39,7 +39,7 @@ function Time() {
           </div>
           <div className="time-item">
             <div className="time"><h1>Xufton: {namozVaqtlari.Isha}</h1></div>
-            <p>Kechaning sokinligini his eting va tonggacha ruhni poklang. 🌙 Isha namozini o'ta, xotirjamlikka erishing.</p>
+            <p>Kunduzgi charchoqdan keyin qaytadan tiklaning. 🌇 Shom namozini o'qish orqali kechqurun tinchlikni toping.</p>
           </div>
         </ul>
       ) : (
