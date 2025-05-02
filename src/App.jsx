@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navabar/Navbar';
 import Time from './Components/Time/Time';
 import Jadval from './Components/Jadval/Jadval';
+import Eslatma from './Components/Eslatma/Eslatma';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);

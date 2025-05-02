@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.eslatmalar-container {
+  padding: 20px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.eslatmalar-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.eslatmalar-container input {
+  padding: 10px;
+  width: 80%;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.eslatmalar-container button {
+  padding: 10px 15px;
+  background-color: #1e5631;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.eslatmalar-container button:hover {
+  background-color: #ffd700;
+}
+
+.eslatmalar-list {
+  margin-top: 20px;
+}
+
+.eslatma-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
