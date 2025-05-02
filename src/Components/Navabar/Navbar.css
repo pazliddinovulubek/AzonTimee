@@ -29,9 +29,11 @@ body.dark-mode {
   gap: 12px;
   font-family: sans-serif;
 }
+
 .logo-brand img {
   height: 40px;
 }
+
 .logo-brand .brand {
   font-size: 20px;
   font-weight: bold;
@@ -42,6 +44,21 @@ body.dark-mode {
   display: flex;
   gap: 24px;
   transition: transform 0.3s ease;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #1e5631;
+  width: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  border-radius: 4px;
+  z-index: 999;
+}
+
+.nav-links.open {
+  transform: translateX(0);
 }
 
 .nav-links a {
@@ -93,7 +110,7 @@ body.dark-mode .navbar {
 
 @media (max-width: 768px) {
   .nav-links {
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 0;
     background-color: #1e5631;
@@ -106,11 +123,11 @@ body.dark-mode .navbar {
   }
 
   .nav-links.open {
-    transform: translateX(0); 
+    transform: translateX(0);
   }
 
   .menu-toggle {
-    display: block; 
+    display: block;
   }
 
   .nav-links a {
