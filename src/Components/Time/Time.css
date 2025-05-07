@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body{
+  overflow-x: hidden;
+}
 .time-container {
   min-height: 100vh; /* Ekranni to‘liq qamrab olish */
   background-image: url('../../assets/bgarund.png');
@@ -12,6 +14,7 @@
   background-position: center; /* Rasm markazda joylashadi */
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
@@ -121,9 +124,9 @@
   .time-container {
     background-image: url('../../assets/bgarund.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Mobil uchun ham cover */
+    background-size: cover; 
     background-position: center;
-    padding: 1rem; /* Mobilda qulayroq ko‘rinish uchun */
+    padding: 1rem; 
   }
 
   .time-container.dark {
