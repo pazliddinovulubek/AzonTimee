@@ -94,7 +94,6 @@ body.dark-mode .navbar {
     position: fixed;
     top: 60px;
     right: 0;
-    background-color: #1e5631;
     width: 200px;
     height: auto;
     flex-direction: column;
