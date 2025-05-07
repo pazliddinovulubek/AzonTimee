@@ -5,17 +5,18 @@
 }
 
 .time-container {
+  min-height: 100vh; /* Ekranni to‘liq qamrab olish */
+  background-image: url('../../assets/bgarund.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* Rasm to‘liq qamrab oladi */
+  background-position: center; /* Rasm markazda joylashadi */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: #1e5631;
+  font-family: sans-serif;
   color: white;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  padding: 20px;
-  transition: background 0.3s, color 0.3s;
+  padding: 2rem;
 }
 
 .time-container.dark {
@@ -33,12 +34,20 @@
 .time-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1.5rem;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  font-size: 1.2rem;
-  line-height: 2rem;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%; /* To‘liq kenglik */
+  padding: 1rem; /* To‘g‘ri joylashishi uchun */
 }
 
 .time-item {
@@ -50,7 +59,7 @@
   margin: 10px 0;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .time-container.dark .time-item {
@@ -59,7 +68,7 @@
 }
 
 .time-item:hover {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   transform: scale(1.05);
 }
 
@@ -83,14 +92,17 @@
   0% {
     opacity: 0.5;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.5;
   }
 }
 
+/* Responsiv dizayn uchun o'zgarishlar */
 @media (max-width: 600px) {
   .title {
     font-size: 2rem;
@@ -99,7 +111,7 @@
   .time-item {
     font-size: 1rem;
     padding: 10px;
-    width: 300px;
+    width: 300px; /* Kichik ekran uchun kartalar */
   }
 
   .loading-text {
@@ -107,8 +119,11 @@
   }
 
   .time-container {
-    height: auto;
-    background: #1e5631;
+    background-image: url('../../assets/bgarund.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Mobil uchun ham cover */
+    background-position: center;
+    padding: 1rem; /* Mobilda qulayroq ko‘rinish uchun */
   }
 
   .time-container.dark {
