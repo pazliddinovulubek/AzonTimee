@@ -26,7 +26,6 @@ html, body{
   background: #0f172a;
   color: #f1f5f9;
 }
-
 .title {
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -49,8 +48,8 @@ html, body{
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 100%; /* To‘liq kenglik */
-  padding: 1rem; /* To‘g‘ri joylashishi uchun */
+  width: 100%; 
+  padding: 1rem;
 }
 
 .time-item {
@@ -105,7 +104,6 @@ html, body{
   }
 }
 
-/* Responsiv dizayn uchun o'zgarishlar */
 @media (max-width: 600px) {
   .title {
     font-size: 2rem;
@@ -114,7 +112,7 @@ html, body{
   .time-item {
     font-size: 1rem;
     padding: 10px;
-    width: 300px; /* Kichik ekran uchun kartalar */
+    width: 300px; 
   }
 
   .loading-text {
@@ -129,7 +127,7 @@ html, body{
     padding: 1rem; 
   }
 
-  .time-container.dark {
+  .time-container .dark{
     background: #0f172a;
   }
 

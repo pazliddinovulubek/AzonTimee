@@ -1,8 +1,10 @@
 import React from 'react'
-
-function Jadval() {
+import './Jadval.css'
+function Jadval({ darkMode }) {
   return (
-    <div>Jadval</div>
+    <div className={`jadval-container ${darkMode ? 'dark' : ''}`}>
+      <div className="jadval-carts"></div>
+    </div >
   )
 }
 

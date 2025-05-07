@@ -10,8 +10,30 @@ body.dark-mode {
   overflow-x: hidden;
 }
 
+body.dark-mode .navbar {
+  background-color: #0f172a;
+  background-image: none;
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-links {
+  background-color: #0f172a;
+}
+
+body.dark-mode .nav-links a {
+  color: #f1f5f9;
+}
+
+body.dark-mode .nav-controls button {
+  color: #f1f5f9;
+}
+
+body.dark-mode .nav-controls button:hover {
+  color: #ffd700;
+}
+
 .navbar {
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,17 +41,13 @@ body.dark-mode {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  background-image: url('../../assets/bgarund.png');
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-image: url('../../assets/bgarund.png');
   border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-body.dark-mode .navbar {
-  background-color: #222;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .logo-brand {
@@ -120,12 +138,12 @@ body.dark-mode .navbar {
     font-size: 28px;
   }
 
-  body.dark-mode .nav-links {
-    background: #0f172a;
-  }
-
   .nav-links a {
     padding: 12px;
     font-size: 18px;
+  }
+
+  body.dark-mode .nav-links {
+    background-color: #0f172a;
   }
 }

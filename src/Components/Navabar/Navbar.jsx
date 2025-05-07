@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.webp';
 
 function Navbar({ darkMode, setDarkMode, menuOpen, setMenuOpen }) {
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
+
   return (
-    <nav className={`navbar ${darkMode ? 'dark' : ''}`}>
+    <nav className="navbar">
       <div className="logo-brand">
         <img src={logo} alt="NamozTime logo" />
         <span className="brand">NamozTime</span>
